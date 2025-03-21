@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="../../css/blog.css">
+    <title>mysql报错之 ERROR 1064 (42000)</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="post-title">mysql报错之 ERROR 1064 (42000)</h1>
+        <div class="post-meta">作者：Ciin7mo  发布于：2025年3月21日</div>
+        <div class="post-content">
+            <h4>问题描述：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = %s' at line 1</h4>
+            <h3>解决方案：</h3>
+            <p>解决办法：（语法错误）检查sql语句是否正确，检查字段是否存在，检查字段类型是否正确。</p>
+            <p>(1)用ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码';
+                然后flush privileges; 刷新权限。</p>
+            <p>(2)或者UPDATE mysql.user SET Password=PASSWORD('新密码') WHERE User='root' AND Host='localhost';
+                <br>然后FLUSH PRIVILEGES;</p>
+            <p>(3)或者直接采用 set password '你的密码'； 即可修改
+                <br>然后再flush privileges; 刷新权限。</p>
+        </div>
+    </div>
+</body>
+</html>
+
