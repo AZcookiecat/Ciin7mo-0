@@ -33,6 +33,11 @@ article {
     padding: 20px;
     border-radius: 5px;
 }
+.container article a {
+    font-size: 24px; /* 将字体大小设置为和 h2 一样 */
+    text-decoration: none; /* 去掉链接的下划线，可选 */
+    color: inherit; /* 继承父元素的颜色，可选 */
+}
 .post-title {
     font-size: 24px;
     margin-bottom: 10px;
